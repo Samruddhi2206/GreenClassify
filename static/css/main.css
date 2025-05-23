@@ -1,0 +1,258 @@
+/* main.css */
+
+
+/* GENERAL RESET & BODY */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4fff2;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+
+/* HEADER */
+
+header {
+    background: linear-gradient(90deg, #2e8b57, #3cb371);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #2e8b57;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #206c46;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443') no-repeat center center/cover;
+    color: white;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+.btn-custom {
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #246944;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #2e8b57;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+
+/* GALLERY */
+
+.img-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img-gallery img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* FORMS */
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #2e8b57;
+    box-shadow: 0 0 5px rgba(46, 139, 87, 0.3);
+    outline: none;
+}
+
+
+/* PREDICTION RESULT */
+
+#result {
+    margin-top: 20px;
+}
+
+.predicted-class {
+    color: #2e8b57;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.confidence {
+    font-style: italic;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+
+/* Form inputs */
+
+
+/* 
+form input.form-control {
+    width: 100%;
+    max-width: 400px;
+    
+    margin: 0 auto;
+ 
+    display: block;
+  
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #2e8b57;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+} */
+
+form input.form-control:focus {
+    border-color: #3cb371;
+    box-shadow: 0 0 8px rgba(60, 179, 113, 0.6);
+    outline: none;
+}
+
+form input.form-control,
+form textarea.form-control {
+    width: 100%;
+    max-width: 400px;
+    /* limits width */
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #2e8b57;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* No margin:auto or display:block so it stays left aligned */
+}
+
+
+/* Button */
+
+.btn-success {
+    background-color: #2e8b57;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    box-shadow: 0 4px 8px rgba(46, 139, 87, 0.3);
+}
+
+.btn-success:hover {
+    background-color: #246944;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(36, 105, 68, 0.5);
+}
+
+.btn-success:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict | GreenClassify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- NAVBAR -->
+        {% include 'navbar.html' %}
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <section>
+                <div class="container">
+                    <h2 class="text-center">🍉 Upload Image to Predict</h2>
+                    <form id="upload-form" enctype="multipart/form-data" novalidate>
+                        <input type="file" id="imageInput" name="image" accept="image/*" required class="form-control" />
+                        <button type="submit" class="btn btn-success mt-3 w-100">Predict</button>
+                    </form>
+                    <div id="result" class="text-center mt-4"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        {% include 'footer.html' %}
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

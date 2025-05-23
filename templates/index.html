@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenClassify | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- HEADER / NAVBAR -->
+        {% include 'navbar.html' %}
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <section class="hero">
+                <h1>Welcome to GreenClassify</h1>
+                <p>Upload images of vegetables or fruits and get instant AI-powered classification results.</p>
+                <a href="{{ url_for('predict_page') }}" class="btn btn-custom">Try Now</a>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+
+</html>

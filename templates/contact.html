@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | GreenClassify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- NAVBAR -->
+        {% include 'navbar.html' %}
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <section>
+                <div class="container">
+                    <h2 class="text-center">Contact Us</h2>
+                    <form>
+                        <input type="text" placeholder="Your Name" class="form-control" required />
+                        <input type="email" placeholder="Your Email" class="form-control" required />
+                        <textarea rows="4" placeholder="Your Message" class="form-control" required></textarea>
+                        <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+
+</html>
